@@ -41,7 +41,7 @@ angular.module("snakeGame").service("snakeService", [
       moveSnake();
       if (checkCollision()) {
         $interval.cancel(gameLoop);
-        alert("Game Over");
+        alert("NGU");
       } else {
         if (eatFood()) {
           score += 10;
