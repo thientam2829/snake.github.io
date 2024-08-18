@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="snakeGame">
+
+<head>
+    <title>Snake</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="snakeController.js"></script>
+    <script src="snakeService.js"></script>
+    <style>
+        .styled-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+
+        }
+
+        .styled-button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body ng-controller="snakeController">
+
+    <div class="game-container">
+        <h1 style="color: black;">SNAKE </h1>
+        <canvas id="gameCanvas" width="350" height="350"></canvas>
+        <br>
+        <div class="score">Score: {{score}}</div><br>
+        <button class="styled-button" ng-click="startGame()">Start Game</button><br>
+        <button class="styled-button" ng-click="resetGame()">Reset Game</button><br>
+    </div>
+</body>
+
+</html>
